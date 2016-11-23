@@ -7,10 +7,20 @@ app.config(['$routeProvider', function($routeProvider) {
       controller: 'HomeController',
       controllerAs: 'home'
     })
-    .when('/potato' ,{
-      templateUrl: '/views/templates/potato.html',
-      controller: 'PotatoController',
-      controllerAs: 'potato'
+    .when('/mulder' ,{
+      templateUrl: '/views/templates/mulder.html',
+      controller: 'MulderController',
+      controllerAs: 'mulder'
+    })
+    .when('/scully' ,{
+      templateUrl: '/views/templates/scully.html',
+      controller: 'ScullyController',
+      controllerAs: 'scully'
+    })
+    .when('/dalecooper' ,{
+      templateUrl: '/views/templates/dalecooper.html',
+      controller: 'DaleCooperController',
+      controllerAs: 'dalecooper'
     })
     .otherwise({
       redirectTo: 'home'
@@ -25,9 +35,23 @@ app.controller('HomeController', function() {
 
 });
 
-app.controller('PotatoController', function() {
-  console.log('potato controller running');
+app.controller('MulderController', function() {
+  console.log('Mulder controller running');
   var self = this;
-  self.message = "Potato controller is the best!";
+  self.message = "Mulder controller is the best!";
+
+});
+
+app.controller('ScullyController', function() {
+  console.log('scully controller running');
+  var self = this;
+  self.message = "Scully controller is the best!";
+
+});
+
+app.controller('DaleCooperController', function() {
+  console.log('dale cooper controller running');
+  var self = this;
+  self.message = "Dale Cooper controller is the best!";
 
 });
